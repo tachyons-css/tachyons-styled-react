@@ -36,7 +36,7 @@ const theme = {
       lineHeight: 1.5, 
       maxWidth: '30em'
     },
-    copy: {
+    title: {
       lineHeight: 1.25, 
       maxWidth: '30em'
     },
