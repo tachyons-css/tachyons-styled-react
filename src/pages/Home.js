@@ -34,8 +34,8 @@ function Home() {
         <A ml='auto' fontSize={0} fontWeight={700} color='black' href='https://github.com/tachyons-css/tachyons-styled-react' title="GitHub">GitHub</A>
       </Header>
       <Main>
-        <Container pt={[5,6]} pb={[5,6,7]}>
-          <H2 fontSize={[3,6,7]} mb={4}>Build, design, and style UI at the speed of light</H2>
+        <Container pt={[5,6]} pb={[5,6,7]} px={4}>
+          <H2 fontSize={[3,6,7]} mb={4} mt={0}>Build, design, and style UI at the speed of light</H2>
           <H3 fontSize={[1,2,3]} lineHeight={1.25} textStyle='caps' color='black-80' mb={5}>
             <Span display={['block', 'inline']}>Tachyons + </Span> 
             <Span display={['block', 'inline']}>Styled-system + </Span>
