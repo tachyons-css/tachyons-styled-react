@@ -6,9 +6,10 @@ import {
   fontSize,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   borders,
-  borderColor
+  borderColor,
 } from "styled-system"
 
 const Cite = styled.cite(
@@ -18,6 +19,7 @@ const Cite = styled.cite(
   fontSize,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   borders,
   borderColor,

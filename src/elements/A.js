@@ -13,7 +13,8 @@ import {
   color,
   borders,
   borderColor,
-  borderRadius
+  borderRadius,
+  textStyle
 } from "styled-system"
 
 const A = styled.a(
@@ -30,6 +31,7 @@ const A = styled.a(
   borders,
   borderColor,
   borderRadius,
+  textStyle,
   {
     boxSizing: "border-box",
     textDecoration: "none",

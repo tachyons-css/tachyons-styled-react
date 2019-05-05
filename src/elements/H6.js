@@ -9,10 +9,11 @@ import {
   fontSize,
   fontWeight,
   lineHeight,
+  textAlign,
+  textStyle,
   color,
   borders,
   borderColor,
-  textStyle,
 } from 'styled-system'
 
 const H6 = styled.h6(
@@ -25,10 +26,11 @@ const H6 = styled.h6(
   fontSize,
   fontWeight,
   lineHeight,
+  textAlign,
+  textStyle,
   color,
   borders,
   borderColor,
-  textStyle,
   {
     boxSizing: 'border-box',
   },

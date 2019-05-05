@@ -8,6 +8,7 @@ import {
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   borders,
   borderColor
@@ -22,6 +23,7 @@ const Dt = styled.dt(
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   borders,
   borderColor,

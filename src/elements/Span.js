@@ -7,6 +7,7 @@ import {
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
 } from 'styled-system'
 
@@ -18,6 +19,7 @@ const Span = styled.span(
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   {},
 )

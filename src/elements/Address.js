@@ -10,6 +10,7 @@ import {
   borders,
   borderColor,
   borderRadius,
+  textStyle,
 } from 'styled-system'
 
 const Address = styled.address(
@@ -23,6 +24,7 @@ const Address = styled.address(
   borders,
   borderColor,
   borderRadius,
+  textStyle,
   {},
 )
 

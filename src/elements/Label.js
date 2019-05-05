@@ -8,6 +8,7 @@ import {
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
 } from 'styled-system'
 
@@ -20,6 +21,7 @@ const Label = styled.label(
   fontWeight,
   lineHeight,
   textAlign,
+  textStyle,
   color,
   {},
 )

@@ -22,6 +22,7 @@ import Span from '../elements/Span'
 import Code from '../elements/Code'
 
 import Logo from '../components/Logo'
+import Container from '../components/Container'
 
 function Home() {
   return (
@@ -33,20 +34,21 @@ function Home() {
         <A ml='auto' fontSize={0} fontWeight={700} color='black' href='https://github.com/tachyons-css/tachyons-styled-react' title="GitHub">GitHub</A>
       </Header>
       <Main>
-        <Div maxWidth='80em' mx='auto' width={1}>
-          <Div p={[4,5,6]}>
-            <H2 fontSize={[3,6,7]} mb={4}>Build, design, and style UI at the speed of light</H2>
-            <H3 fontSize={[1,2,3]} lineHeight={1.25} textStyle='caps' color='black-80' mb={5}>
-              <Span display={['block', 'inline']}>Tachyons + </Span> 
-              <Span display={['block', 'inline']}>Styled-system + </Span>
-              <Span display={['block', 'inline']}>Emotion + </Span>
-              <Span display={['block', 'inline']}>Create React App</Span>
-            </H3>
-            <A href='/styles' title="Styles and documentation" bg='dark-blue' color='white' borderRadius={2} py={3} px={4} fontSize={[1]} fontWeight={700}>Styles &amp; Documentation</A>
-          </Div>
-        </Div>
-      </Main>
-    </Div>
+        <Container>
+          <H2 fontSize={[3,6,7]} mb={4}>Build, design, and style UI at the speed of light</H2>
+          <H3 fontSize={[1,2,3]} lineHeight={1.25} textStyle='caps' color='black-80' mb={5}>
+            <Span display={['block', 'inline']}>Tachyons + </Span> 
+            <Span display={['block', 'inline']}>Styled-system + </Span>
+            <Span display={['block', 'inline']}>Emotion + </Span>
+            <Span display={['block', 'inline']}>Create React App</Span>
+          </H3>
+          <A href='/styles' title="Styles and documentation" 
+             bg='dark-blue' color='white' borderRadius={2} py={3} px={4} fontSize={[1]} fontWeight={700}>
+            Styles &amp; Documentation
+          </A>
+        </Container>
+    </Main>
+  </Div>
   );
 }
 

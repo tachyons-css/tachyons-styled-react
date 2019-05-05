@@ -12,6 +12,7 @@ import {
   borders,
   borderColor,
   borderRadius,
+  textStyle,
 } from 'styled-system'
 
 const Button = styled.button(
@@ -27,6 +28,7 @@ const Button = styled.button(
   borders,
   borderColor,
   borderRadius,
+  textStyle,
   {
     boxSizing: 'border-box',
     fontFamily: 'inherit',

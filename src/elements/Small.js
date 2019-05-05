@@ -5,6 +5,7 @@ import {
   fontSize,
   fontWeight,
   lineHeight,
+  textStyle,
   color,
 } from 'styled-system'
 
@@ -14,6 +15,7 @@ const Small = styled.small(
   fontSize,
   fontWeight,
   lineHeight,
+  textStyle,
   color,
   {},
 )

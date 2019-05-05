@@ -7,7 +7,8 @@ import {
   fontWeight,
   textAlign,
   color,
-  display
+  display,
+  textStyle
 } from "styled-system"
 
 const Abbr = styled.abbr(
@@ -18,6 +19,7 @@ const Abbr = styled.abbr(
   textAlign,
   color,
   display,
+  textStyle,
   {}
 )
 

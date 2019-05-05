@@ -6,13 +6,13 @@ import {
   maxWidth,
   fontSize,
   fontWeight,
-  textAlign,
   lineHeight,
+  textAlign,
+  textStyle,
   color,
   borders,
   borderColor,
   borderRadius,
-  textStyle,
 } from 'styled-system'
 
 const P = styled.p(
@@ -22,13 +22,13 @@ const P = styled.p(
   maxWidth,
   fontSize,
   fontWeight,
-  textAlign,
   lineHeight,
+  textAlign,
+  textStyle,
   color,
   borders,
   borderColor,
   borderRadius,
-  textStyle,
   {
     boxSizing: 'border-box',
   },
