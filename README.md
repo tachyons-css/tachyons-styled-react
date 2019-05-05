@@ -43,6 +43,27 @@ complex components.
 
 Add new pages / routes in src/App.js
 
+You can copy src/pages/Example.js to get a new blank page to work with. Say we wanted
+to create a view at localhost:3000/new-page and we wanted the page to be called NewPage.
+
+Import it into App.js 
+```
+// import pages here 
+import Styles from './pages/Styles'
+import Home from './pages/Home'
+import NewPage from './pages/NewPage'
+```
+
+Next add the route you want to use for that page
+
+```
+  <Router>
+    <Route exact path='/' component={Home} />
+    <Route path='/styles' component={Styles} />
+    <Route path='/new-page' component={NewPage} />
+  </Router>
+```
+
 ## Theme
 
 The theme file is 100% configurable. While Tachyons comes with some useful defaults, 
@@ -64,16 +85,18 @@ ideas with a common set of principals.
 
 The main Tachyons repo includes a bunch of terse naming schemes for a lot of
 the classes, but that was never a core part of the project, which is why thanks
-to @jasonli there has been a verbose version with longer class names. The core
-principals of Tachyons for me have been centered around pushing the envelope in
-css performance both in rendering speed and download speed. It's also been a
-way for me to think about and test concepts around developer ergonomics. I also
-wanted to test how varied you could make visual design with a fairly small set
-of primitives.  While trying to keep Tachyons small - it's important to limit
+to [@hongkonggong](https://github.com/hongkonggong) there has been a verbose
+version with longer class names we've supported. While the main version was
+built with postcss, we've long supported a sass build as well. The stack has
+never been the point. Tachyons for me have been centered around pushing the
+envelope in css performance for both rendering and download speed while testing
+the relationships between values in design primitives.
+
+While trying to keep Tachyons small - it's important to limit
 things like how large the color palette is. For every color there were
 corresponding border,:hover,:focus classes. With styled-system and emotion this
-isn't an issue. You can keep a more verbose color palette, without incurring a
-larger css foot-print. The only css that's generated is for the styles you are
+isn't an issue. You can keep a more verbose color palette, without automatically 
+creating a larger css foot-print. The only css that's generated is for the styles you are
 using. While some people use something to strip out unused styles, I think this
 model makes more sense and is less error prone.
 
