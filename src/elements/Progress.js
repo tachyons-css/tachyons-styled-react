@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import theme from '../theme'
 import {
   space,
@@ -11,7 +12,7 @@ import {
   borderRadius,
 } from 'styled-system'
 
-const Progress = styled.progress(
+const Progress = styled('progress', { shouldForwardProp })(
   space,
   width,
   height,

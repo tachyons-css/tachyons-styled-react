@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -12,7 +13,7 @@ import {
   borderRadius
 } from "styled-system"
 
-const Legend = styled.legend(
+const Legend = styled('legend', { shouldForwardProp })(
   space,
   width,
   maxWidth,

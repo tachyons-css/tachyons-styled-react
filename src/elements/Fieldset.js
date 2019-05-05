@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -11,7 +12,7 @@ import {
   borderRadius,
 } from 'styled-system'
 
-const Fieldset = styled.fieldset(
+const Fieldset = styled('fieldset', { shouldForwardProp })(
   space,
   width,
   maxWidth,

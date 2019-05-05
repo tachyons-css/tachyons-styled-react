@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -12,7 +13,7 @@ import {
   color
 } from "styled-system"
 
-const InputFile = styled.input(
+const InputFile = styled('input', { shouldForwardProp })(
   space,
   width,
   display,

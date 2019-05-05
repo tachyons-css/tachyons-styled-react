@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   display,
@@ -13,7 +14,7 @@ import {
   textStyle,
 } from 'styled-system'
 
-const Address = styled.address(
+const Address = styled('address', { shouldForwardProp })(
   space,
   display,
   width,

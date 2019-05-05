@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -15,7 +16,7 @@ import {
   borderRadius,
 } from 'styled-system'
 
-const Footer = styled.footer(
+const Footer = styled('footer', { shouldForwardProp })(
   space,
   width,
   maxWidth,

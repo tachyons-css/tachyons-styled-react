@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -9,7 +10,9 @@ import {
   color,
 } from 'styled-system'
 
-const Sup = styled.sup(space, fontSize, fontWeight, lineHeight, color, borderRadius, {})
+const Sup = styled('sup', { shouldForwardProp })(
+  space, fontSize, fontWeight, lineHeight, color, borderRadius, {}
+)
 
 Sup.defaultProps = {}
 

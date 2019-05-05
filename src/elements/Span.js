@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -11,7 +12,7 @@ import {
   color,
 } from 'styled-system'
 
-const Span = styled.span(
+const Span = styled('span', { shouldForwardProp })(
   space,
   width,
   display,

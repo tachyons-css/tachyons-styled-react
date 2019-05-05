@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   display,
   space,
@@ -10,7 +11,7 @@ import {
   borderRadius
 } from "styled-system"
 
-const Textarea = styled.textarea(
+const Textarea = styled('textarea', { shouldForwardProp })(
   display,
   space,
   width,

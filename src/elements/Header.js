@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -13,7 +14,7 @@ import {
   borderColor,
 } from 'styled-system'
 
-const Header = styled.header(
+const Header = styled('header', { shouldForwardProp })(
   space,
   width,
   display,

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -13,7 +14,7 @@ import {
   borderRadius
 } from "styled-system"
 
-const Aside = styled.aside(
+const Aside = styled('aside', { shouldForwardProp })(
   space,
   width,
   maxWidth,

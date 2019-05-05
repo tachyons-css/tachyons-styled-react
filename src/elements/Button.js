@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
@@ -15,7 +16,7 @@ import {
   textStyle,
 } from 'styled-system'
 
-const Button = styled.button(
+const Button = styled('button', { shouldForwardProp })(
   space,
   width,
   maxWidth,

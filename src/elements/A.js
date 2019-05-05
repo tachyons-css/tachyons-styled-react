@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 
 import {
   space,
@@ -17,7 +18,7 @@ import {
   textStyle
 } from "styled-system"
 
-const A = styled.a(
+const A = styled('a', { shouldForwardProp })(
   space,
   width,
   maxWidth,
@@ -25,13 +26,13 @@ const A = styled.a(
   fontSize,
   fontWeight,
   textAlign,
+  textStyle,
   color,
   alignItems,
   justifyContent,
   borders,
   borderColor,
   borderRadius,
-  textStyle,
   {
     boxSizing: "border-box",
     textDecoration: "none",

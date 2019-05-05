@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   display,
@@ -11,7 +12,7 @@ import {
   borderRadius,
 } from 'styled-system'
 
-const Form = styled.form(
+const Form = styled('form', { shouldForwardProp })(
   space,
   display,
   width,

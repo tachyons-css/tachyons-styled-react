@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import shouldForwardProp from "@styled-system/should-forward-prop"
 
 import {
   space,
@@ -12,7 +13,7 @@ import {
   borderRadius,
 } from 'styled-system'
 
-const Img = styled.img(
+const Img = styled('img', { shouldForwardProp })(
   space,
   display,
   width,
