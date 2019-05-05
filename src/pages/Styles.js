@@ -16,6 +16,7 @@ import Span from '../elements/Span'
 import Code from '../elements/Code'
 
 import Logo from '../components/Logo'
+import Container from '../components/Container'
 
 const fontSizes = [ ...theme.fontSizes ]
 
@@ -27,7 +28,7 @@ function Styles() {
           <Logo color='rgba(0,0,0,.7)' />
         </Div>
       </Header>
-      <Div maxWidth='80em' mx='auto' width={1}>
+      <Container>
         <Section p={4}>
           <H3>Typefaces</H3>
             {Object.keys(theme.typefaces).map((keyName, i) => (
@@ -41,8 +42,8 @@ function Styles() {
                 >{theme.typefaces[keyName]}</Code>
                 <Div style={{ fontFamily: theme.typefaces[keyName] }} lineHeight={1} mt={0} fontSize={1}>
                   <Span fontSize={1} display='block'>27/9/19</Span>
-                  <H3 fontWeight={700} my={3} fontSize={6}>An engaging headline</H3>
-                  <P fontWeight={600} fontSize={4}>
+                  <H3 fontWeight={700} my={3} fontSize={[5,6]}>An engaging headline</H3>
+                  <P fontWeight={600} fontSize={[3,4]}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                     sed diam nonumy eirmod tempor invidunt ut labore et dolore
                     magna aliquyam erat.
@@ -63,14 +64,16 @@ function Styles() {
         </Section>
         <Section px={4} py={5}>
           <H3>Type Scale</H3>
-          {fontSizes.reverse().map((fontSize, i) => (
-            <>
-            <H5 fontWeight={800} mt={0} mb={0}>{fontSize}px <Span pl={3} fontWeight={500} color='black-70'>theme.fontSizes[{theme.fontSizes.length - i - 1}]</Span></H5>
-            <P lineHeight={1} mt={0} mb={5} fontSize={theme.fontSizes.length - i - 1} fontWeight={700}>
-              The quick brown fox jumped
-            </P>
-            </>
-          ))}
+          <Div style={{overflowX: 'scroll'}}>
+            {fontSizes.reverse().map((fontSize, i) => (
+              <>
+              <H5 fontWeight={800} mt={0} mb={0}>{fontSize}px <Span pl={3} fontWeight={500} color='black-70'>theme.fontSizes[{theme.fontSizes.length - i - 1}]</Span></H5>
+              <P lineHeight={1} mt={0} mb={5} fontSize={theme.fontSizes.length - i - 1} fontWeight={700}>
+                The quick brown fox jumped
+              </P>
+              </>
+            ))}
+          </Div>
         </Section>
         <Section px={4} py={5}>
           <H3>Leading</H3>
@@ -101,17 +104,17 @@ function Styles() {
             ))}
           </Table>
         </Section>
-        <Section py={5}>
+        <Section py={5} px={4}>
           <H3>Spacing Scale</H3>
-          <Div width='auto' position='relative' height='auto'>
-            <Div>
-              {theme.space.map((space, i) => (
-                <Div position='absolute' width={space} height={space} bg='black-20' mb={1}></Div>
-              ))}
-            </Div>
+            <Div width='auto' position='relative' height='auto'>
+              <Div>
+                {theme.space.map((space, i) => (
+                  <Div position='absolute' width={space} height={space} bg='black-20' mb={1}> </Div>
+                ))}
+              </Div>
           </Div>
         </Section>
-        <Section mt={8} py={5}>
+        <Section mt={8} py={5} px={4}>
           <H3>Border Widths</H3>
           <Div position='relative'>
             {theme.borderWidths.map((borderWidth, i) => (
@@ -123,9 +126,9 @@ function Styles() {
             ))}
           </Div>
         </Section>
-        <Section py={5}>
+        <Section py={5} px={4}>
           <H3>Border Radii</H3>
-          <Div display='flex' mx={-3}>
+          <Div display='flex' mx={-3} maxWidth='100%' style={{overflowX: 'scroll'}}>
             {theme.radii.map((radius, i) => (
               <>
               <Div mb={3} px={3}>
@@ -136,7 +139,7 @@ function Styles() {
             ))}
           </Div>
         </Section>
-      </Div>
+      </Container>
     </Div>
   );
 }
