@@ -1,11 +1,18 @@
 {
-  "name": "tachyons-react-app",
+  "name": "tachyons-styled-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "emotion-theming": "^10.0.10",
+    "react-dom": "^16.8.6",
+    "react-emotion": "^10.0.0",
+    "react-router-dom": "^5.0.0",
+    "styled-system": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
