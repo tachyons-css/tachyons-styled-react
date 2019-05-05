@@ -19,7 +19,7 @@ import Logo from '../components/Logo'
 
 const fontSizes = [ ...theme.fontSizes ]
 
-function Home() {
+function Styles() {
   return (
     <Div>
       <Header px={3} py={2} borderBottom='1px solid' borderColor='black-20'>
@@ -141,4 +141,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Styles

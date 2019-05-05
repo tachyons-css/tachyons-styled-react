@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import Link from "next/link"
 
 import {
   space,
@@ -47,12 +46,4 @@ A.defaultProps = {
   cursor: "pointer"
 }
 
-Link.defaultProps = {
-  href: "#0"
-}
-
-export default ({ children, href, ...props }) => (
-  <Link href={href}>
-    <A {...props}>{children}</A>
-  </Link>
-)
+export default A

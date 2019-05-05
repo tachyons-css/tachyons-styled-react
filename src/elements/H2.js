@@ -11,7 +11,8 @@ import {
   lineHeight,
   color,
   borders,
-  borderColor
+  borderColor,
+  textStyle,
 } from "styled-system"
 
 const H2 = styled.h2(
@@ -27,6 +28,7 @@ const H2 = styled.h2(
   color,
   borders,
   borderColor,
+  textStyle,
   {
     boxSizing: "border-box"
   }

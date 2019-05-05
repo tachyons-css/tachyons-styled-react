@@ -12,6 +12,7 @@ import {
   color,
   borders,
   borderColor,
+  textStyle,
 } from 'styled-system'
 
 const H5 = styled.h5(
@@ -27,6 +28,7 @@ const H5 = styled.h5(
   color,
   borders,
   borderColor,
+  textStyle,
   {
     boxSizing: 'border-box',
   },

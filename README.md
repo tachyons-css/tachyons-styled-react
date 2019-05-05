@@ -3,8 +3,8 @@
 This extends create-react-app to include Tachyons implemented with emotion +
 styled-system. If you're familiar with Tachyons and are interested in
 css-in-js, this is hopefully a helpful project. Can be used for anything you'd
-use create-react-app for. While Tachyons is light-weight by default, using css-in-js can
-allow you to only send needed styles down the wire to the user. This if often under 4kb. 
+use create-react-app for. While Tachyons is light-weight by default, using css-in-js will
+result in increased css performance as you don't send unused styles down the wire.
 
 ## Getting going
 
@@ -22,6 +22,9 @@ Start the dev environment
 ```
 yarn start
 ```
+
+This should start a development environment on ```localhost:3000```
+
 
 ## Elements 
 ```
