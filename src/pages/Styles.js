@@ -32,32 +32,34 @@ function Home() {
           <H3>Typefaces</H3>
             {Object.keys(theme.typefaces).map((keyName, i) => (
               <Div mt={5} mb={6}>
-                <H4 mt={0} mb={2} fontSize={4} textStyle='capitalize' lineHeight={1}>{keyName === 'sansSerif'? 'Sans Serif':keyName}</H4>
+                <H4 mt={0} mb={2} fontSize={4} textStyle='capitalize' lineHeight={1}>
+                  {keyName === 'sansSerif'? 'Sans Serif':keyName}
+                </H4>
                 <Code display='block'  fontSize='14px' mt={0} mb={4}
                   pb={2}
                   borderBottom='1px solid black'
                 >{theme.typefaces[keyName]}</Code>
                 <Div style={{ fontFamily: theme.typefaces[keyName] }} lineHeight={1} mt={0} fontSize={1}>
-                  <Span fontSize={1} display='block'>27/9/19 </Span>
+                  <Span fontSize={1} display='block'>27/9/19</Span>
                   <H3 fontWeight={700} my={3} fontSize={6}>An engaging headline</H3>
                   <P fontWeight={600} fontSize={4}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat.
                   </P>
                   <P fontWeight={400} fontSize={2}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet.  Sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren,
                     no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Sed diam voluptua. At vero eos et accusam et justo duo
-                    dolores et ea rebum. Stet clita kasd gubergren, no sea
-                    takimata sanctus est Lorem ipsum dolor sit amet.
                   </P>
-
               </Div>
               </Div>
             ))}
-
         </Section>
         <Section px={4} py={5}>
           <H3>Type Scale</H3>

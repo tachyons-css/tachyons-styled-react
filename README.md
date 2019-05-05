@@ -8,8 +8,9 @@ allow you to only send needed styles down the wire to the user. This if often un
 
 ## Getting going
 
-Clone the directory 
+Clone the directory and cd into the root of the directory
 ```
+git clone git@github.com:tachyons-css/tachyons-styled-react.git newProject && cd newProject
 ```
 
 Install dependencies
@@ -29,5 +30,14 @@ src/elements/
 This folder contains html elements wired up to styled system. Scales 
 are defined and configurable in ```src/theme.js```
 
-If you edit this you will see the style guide update on the home page
+Elements is meant to be customizable. By default they aren't very opinionated - but 
+you could set your base reset / normalize styles here. 
 
+Elements can be composed together just like regular html elements to make more
+complex components. 
+
+## Reference 
+
+- (https://styled-system.com)
+- [https://emotion.sh]
+- [https://github.com/facebook/create-react-app]
