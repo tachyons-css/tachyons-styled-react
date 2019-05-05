@@ -35,9 +35,14 @@ function Home() {
       <Main>
         <Div maxWidth='80em' mx='auto' width={1}>
           <Div p={[4,5,6]}>
-            <H2 fontSize={[4,6,7]} mb={4}>Build, design, and style UI at the speed of light</H2>
-            <H3 fontSize={[1,2,3]} textStyle='caps' color='black-80' mb={5}>Tachyons + Styled-system + Emotion + Create React App</H3>
-            <A href='/styles' title="Styles and documentation" bg='dark-blue' color='white' borderRadius={2} py={2} px={4}>Styles &amp; Documentation</A>
+            <H2 fontSize={[3,6,7]} mb={4}>Build, design, and style UI at the speed of light</H2>
+            <H3 fontSize={[1,2,3]} lineHeight={1.25} textStyle='caps' color='black-80' mb={5}>
+              <Span display={['block', 'inline']}>Tachyons + </Span> 
+              <Span display={['block', 'inline']}>Styled-system + </Span>
+              <Span display={['block', 'inline']}>Emotion + </Span>
+              <Span display={['block', 'inline']}>Create React App</Span>
+            </H3>
+            <A href='/styles' title="Styles and documentation" bg='dark-blue' color='white' borderRadius={2} py={3} px={4} fontSize={[1]} fontWeight={700}>Styles &amp; Documentation</A>
           </Div>
         </Div>
       </Main>
