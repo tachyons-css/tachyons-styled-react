@@ -33,23 +33,67 @@ src/elements/
 This folder contains html elements wired up to styled system. Scales 
 are defined and configurable in ```src/theme.js```
 
-Elements is meant to be customizable. By default they aren't very opinionated - but 
-you could set your base reset / normalize styles here and make them as opinionated as you want. 
+Not every element has every styling prop included. For instance I don't find it useful
+to set fontSize on an img.
 
 Elements can be composed together just like regular html elements to make more
 complex components. 
-
-One downside in this current setup is you need to manually import elements you want to style. 
-Someone better at js than myself could set this up so that everything in
-elements is automatically imported for use within ```src/components``` &
-```src/pages```.
 
 ## Pages
 
 Add new pages / routes in src/App.js
 
+## Theme
+
+The theme file is 100% configurable. While Tachyons comes with some useful defaults, 
+you can modify, extend, or reduce anything that's there to fit your needs. 
+
+## Styled system
+
+Styled system is well documented and I suggest checking out the official site
+over at https://styled-system.com. In short - Styled system allows you to pass
+arrays of values to style props like color, fontSize, display, and more that
+map to a consistent set of breakpoints.  You can reference scales from a theme
+file or pass in literal values. The output is a set of single purpose classes
+for only the styles you need in your view.
+
+I love styled system. I've been using it heavily for the last two years and I
+think it is a great way to implement Tachyons. While many people think of
+Tachyons as a css file, I think of it as a project. A whole bunch of modular
+ideas with a common set of principals. 
+
+The main Tachyons repo includes a bunch of terse naming schemes for a lot of
+the classes, but that was never a core part of the project, which is why thanks
+to @jasonli there has been a verbose version with longer class names. The core
+principals of Tachyons for me have been centered around pushing the envelope in
+css performance both in rendering speed and download speed. It's also been a
+way for me to think about and test concepts around developer ergonomics. I also
+wanted to test how varied you could make visual design with a fairly small set
+of primitives.  While trying to keep Tachyons small - it's important to limit
+things like how large the color palette is. For every color there were
+corresponding border,:hover,:focus classes. With styled-system and emotion this
+isn't an issue. You can keep a more verbose color palette, without incurring a
+larger css foot-print. The only css that's generated is for the styles you are
+using. While some people use something to strip out unused styles, I think this
+model makes more sense and is less error prone.
+
+While personally I don't have too much trouble parsing the same property being
+spread out in a class string e.g. ```"f2 db di-ns f3-m f4-l"``` I think it's a
+lot nicer to have properties automatically grouped together. You also aren't
+dealing with repetitive name spacing in the class names e.g ```f6 f4-ns f3-l```
+Each f is just indicating it's the font size property. I don't think I'm going
+out on a limb to say that this is ~1000x nicer ```fontSize={[3,4,6]}```
+
+If the transition to javascript style syntax scares you a bit, I can absolutely
+relate. I am very limited in my javascript ability and this project is partly a
+reflection of all the stuff I wish I had setup 2 years ago when I first started
+to almost explicitly work in codebases that used a css-in-js solution for
+styling. If you know html and css - I hope this serves as a gateway to play with 
+react and css-in-js a bit. It's currently my favorite way to use Tachyons.
+
 ## Reference 
 
-- (https://styled-system.com)
-- [https://emotion.sh]
-- [https://github.com/facebook/create-react-app]
+- https://styled-system.com
+- https://styled-system.com/table
+- https://emotion.sh
+- https://github.com/facebook/create-react-app
