@@ -1,4 +1,5 @@
 import React from 'react'
+import parseCombos from '../lib/parse-combos'
 import theme from '../theme'
 
 import Div from '../elements/Div'
@@ -32,7 +33,7 @@ function Styles() {
         <Section p={4}>
           <H3>Typefaces</H3>
             {Object.keys(theme.typefaces).map((keyName, i) => (
-              <Div mt={5} mb={6}>
+              <Div mt={5} mb={6} key={keyName + i}>
                 <H4 mt={0} mb={2} fontSize={4} textStyle='capitalize' lineHeight={1}>
                   {keyName === 'sansSerif'? 'Sans Serif':keyName}
                 </H4>
@@ -40,7 +41,7 @@ function Styles() {
                   pb={2}
                   borderBottom='1px solid black'
                 >{theme.typefaces[keyName]}</Code>
-                <Div style={{ fontFamily: theme.typefaces[keyName] }} lineHeight={1} mt={0} fontSize={1}>
+                <Div fontFamily={theme.typefaces[keyName]} lineHeight={1} mt={0} fontSize={1}>
                   <Span fontSize={1} display='block'>27/9/19</Span>
                   <H3 fontWeight={700} my={3} fontSize={[5,6]}>An engaging headline</H3>
                   <P fontWeight={600} fontSize={[3,4]}>
@@ -92,6 +93,7 @@ function Styles() {
         <Section px={[0,4]} py={5} style={{overflowX: 'scroll'}}>
           <H3 px={[4,0]}>Colors</H3>
           <Table>
+            <tbody>
             {Object.keys(theme.colors).map((keyName, i) => (
               <Tr>
                 <Td maxWidth={64} borderBottom='1px solid' borderColor={theme.colors[keyName]} py={1}>
@@ -102,6 +104,7 @@ function Styles() {
                 <Td borderBottom='1px solid' borderColor={theme.colors[keyName]} px={[0,3]} textAlign='right' bg='white' width='auto' fontSize={[0,1,1]}>{theme.colors[keyName]}</Td>
               </Tr>
             ))}
+          </tbody>
           </Table>
         </Section>
         <Section py={5} px={4}>
@@ -109,7 +112,7 @@ function Styles() {
             <Div width='auto' position='relative' height='auto'>
               <Div>
                 {theme.space.map((space, i) => (
-                  <Div position='absolute' width={space} height={space} bg='black-20' mb={1}> </Div>
+                  <Div position='absolute' width={space+'px'} height={space+'px'} bg='black-20' mb={1}> </Div>
                 ))}
               </Div>
           </Div>
