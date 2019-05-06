@@ -26,10 +26,10 @@ const Progress = styled('progress', { shouldForwardProp })(
     webkitAppearance: 'none',
     appearance: 'none',
     '&[value]::-webkit-progress-bar': {
-      backgroundColor: theme.colors.gray[8]
+      backgroundColor: theme.colors.gray
     },
     '&[value]::-webkit-progress-value': {
-      backgroundColor: theme.colors.blue[4]
+      backgroundColor: theme.colors.blue
     },
     verticalAlign: 'top',
   },
