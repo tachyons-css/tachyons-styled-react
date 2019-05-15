@@ -15,7 +15,9 @@ const theme = {
     0, '2px', '4px', '16px', '9999px', '100%'
   ],
   lineHeights: [
-    1, 1.25, 1.5 
+    '1.0', 
+    '1.25', 
+    '1.5'
   ],
   measures: [
     '20em', '30em', '34em'
