@@ -11,7 +11,19 @@ import {
   color,
   borders,
   borderColor,
-  borderRadius
+  borderRadius,
+  gridGap,
+  gridColumnGap,
+  gridRowGap,
+  gridColumn,
+  gridRow,
+  gridAutoFlow,
+  gridAutoColumns,
+  gridAutoRows,
+  gridTemplateColumns,
+  gridTemplateRows,
+  gridTemplateAreas,
+  gridArea,
 } from "styled-system"
 
 const Ul = styled('ul', { shouldForwardProp })(
@@ -24,6 +36,18 @@ const Ul = styled('ul', { shouldForwardProp })(
   borders,
   borderColor,
   borderRadius,
+  gridGap,
+  gridColumnGap,
+  gridRowGap,
+  gridColumn,
+  gridRow,
+  gridAutoFlow,
+  gridAutoColumns,
+  gridAutoRows,
+  gridTemplateColumns,
+  gridTemplateRows,
+  gridTemplateAreas,
+  gridArea,
   {
     boxSizing: "border-box"
   }

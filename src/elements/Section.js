@@ -12,7 +12,19 @@ import {
   color,
   borders,
   borderColor,
-  borderRadius
+  borderRadius,
+  gridGap,
+  gridColumnGap,
+  gridRowGap,
+  gridColumn,
+  gridRow,
+  gridAutoFlow,
+  gridAutoColumns,
+  gridAutoRows,
+  gridTemplateColumns,
+  gridTemplateRows,
+  gridTemplateAreas,
+  gridArea,
 } from "styled-system"
 
 const Section = styled('section', { shouldForwardProp })(
@@ -28,6 +40,18 @@ const Section = styled('section', { shouldForwardProp })(
   borders,
   borderColor,
   borderRadius,
+  gridGap,
+  gridColumnGap,
+  gridRowGap,
+  gridColumn,
+  gridRow,
+  gridAutoFlow,
+  gridAutoColumns,
+  gridAutoRows,
+  gridTemplateColumns,
+  gridTemplateRows,
+  gridTemplateAreas,
+  gridArea,
   {
     boxSizing: "border-box"
   }
