@@ -6,6 +6,7 @@ import theme from './theme'
 // import pages here 
 import Styles from './pages/Styles'
 import Home from './pages/Home'
+import Playground from './pages/Playground'
 import Components from './pages/Components'
 
 import Div from './elements/Div'
@@ -18,6 +19,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route path='/styles' component={Styles} />
           <Route path='/components' component={Components} />
+          <Route path='/playground' component={Playground} />
         </Router>
       </Div>
     </ThemeProvider>

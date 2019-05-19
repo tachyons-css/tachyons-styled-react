@@ -28,6 +28,7 @@ import {
   gridTemplateRows,
   gridTemplateAreas,
   gridArea,
+  overflow,
 } from 'styled-system'
 
 const Article = styled('article', { shouldForwardProp })(
@@ -58,6 +59,7 @@ const Article = styled('article', { shouldForwardProp })(
   gridTemplateRows,
   gridTemplateAreas,
   gridArea,
+  overflow,
   {
     boxSizing: 'border-box',
   },
