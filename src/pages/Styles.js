@@ -7,14 +7,18 @@ import Logo from '../components/Logo'
 import Container from '../components/Container'
 
 const fontSizes = [ ...theme.fontSizes ]
+const space = [ ...theme.space ]
 
 function Styles() {
   return (
     <div>
-      <header px={3} py={2} borderBottom='1px solid' borderColor='black-20'>
-        <div maxWidth='6rem' mx='auto'>
-          <Logo color='rgba(0,0,0,.7)' />
+      <header px={4} py={2} borderBottom='1px solid' borderColor='black-20' display='flex' alignItems='center'>
+        <div maxWidth='6rem'>
+          <a display='block' href='https://tachyons.io'><Logo color='rgba(0,0,0,.7)' /></a>
         </div>
+        <a ml='auto' mr={3} fontSize={0} fontWeight={700} color='black' href='/components' title="Components">Components </a>
+        <a fontSize={0} mr={3} fontWeight={700} color='black' href='/styles' title="Styles">Styles</a>
+        <a fontSize={0} fontWeight={700} color='black' href='https://github.com/tachyons-css/tachyons-styled-react' title="GitHub">GitHub</a>
       </header>
       <Container>
         <section p={4}>
@@ -56,7 +60,7 @@ function Styles() {
             {fontSizes.reverse().map((fontSize, i) => (
               <>
               <h5 fontWeight={800} mt={0} mb={0}>{fontSize}px <span pl={3} fontWeight={500} color='black-70'>theme.fontSizes[{theme.fontSizes.length - i - 1}]</span></h5>
-              <p lineHeight={1} mt={0} mb={5} fontSize={theme.fontSizes.length - i - 1} fontWeight={700}>
+              <p lineHeight={1} mt={0} mb={5} fontSize={theme.fontSizes.length - i - 1} fontWeight={700} style={{ whiteSpace: 'nowrap' }}>
                 The quick brown fox jumped
               </p>
               </>
@@ -65,7 +69,7 @@ function Styles() {
         </section>
         <section px={4} py={5}>
           <h3>Leading</h3>
-          <div display={['block', 'flex']} mx={[0,-3]}>
+          <div display={['flex']} flexWrap={['wrap', 'nowrap']} mx={[0,-3]}>
           {theme.lineHeights.map((lineHeight, i) => (
             <div width={[1,1/3]} px={[0,3]} key={i+lineHeight}>
               <h5 fontWeight={800} mt={0} mb={2}>Line Height: {lineHeight}</h5>
@@ -100,10 +104,20 @@ function Styles() {
         <section py={5} px={4}>
           <h3>Spacing Scale</h3>
           <div  style={{overflowX: 'scroll'}}>
-            <div width='auto' position='relative' height={theme.space[theme.space.length - 1]}>
-              <div>
-                {theme.space.map((space, i) => (
-                  <div position='absolute' width={space} height={space} bg='black-20'> </div>
+            <div position='relative' mb={2} height={32}>
+                {space.reverse().map((space, i) => (
+                  <div title={space} position='absolute' top='0' left='0' bottom='0' width={space} height={32} bg='black-10' borderRight='1px solid rgba(0,0,0,.1)'> </div>
+                ))}
+              </div>
+              <div display='flex'>
+            <div mr={2} position='relative' width={theme.space[theme.space.length -1]} height={theme.space[theme.space.length - 1]}>
+                {space.reverse().map((space, i) => (
+                  <div border='1px solid rgba(0,0,0,.1)' title={space} position='absolute' top='50%' right='50%' width={space} height={space} bg='black-10' style={{transform: 'translate(50%,-50%)'}}> </div>
+                ))}
+            </div>
+            <div position='relative' mb={2} width={32} height={theme.space[theme.space.length -1]}>
+                {space.reverse().map((space, i) => (
+                  <div title={space} position='absolute' top='0' left='0' bottom='0' width={32} height={space} bg='black-10' borderBottom='1px solid rgba(0,0,0,.1)'> </div>
                 ))}
               </div>
             </div>
