@@ -13,7 +13,7 @@ function Home() {
         <div maxWidth='6rem'>
           <a display='block' href='https://tachyons.io'><Logo color='rgba(0,0,0,.7)' /></a>
         </div>
-        <a ml='auto' mr={3} fontSize={0} fontWeight={700} color='black' href='/styles' title="Styles">Components </a>
+        <a ml='auto' mr={3} fontSize={0} fontWeight={700} color='black' href='/components' title="Components">Components </a>
         <a fontSize={0} mr={3} fontWeight={700} color='black' href='/styles' title="Styles">Styles</a>
         <a fontSize={0} fontWeight={700} color='black' href='https://github.com/tachyons-css/tachyons-styled-react' title="GitHub">GitHub</a>
       </header>
