@@ -6,6 +6,7 @@ import theme from './theme'
 // import pages here 
 import Styles from './pages/Styles'
 import Home from './pages/Home'
+import Components from './pages/Components'
 
 import Div from './elements/Div'
 
@@ -16,6 +17,7 @@ function App() {
         <Router>
           <Route exact path='/' component={Home} />
           <Route path='/styles' component={Styles} />
+          <Route path='/components' component={Components} />
         </Router>
       </Div>
     </ThemeProvider>
