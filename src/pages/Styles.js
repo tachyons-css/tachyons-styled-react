@@ -2,6 +2,7 @@
 import jsx from '../jsx'
 import React from 'react'
 import theme from '../theme'
+import chroma from 'chroma-js'
 
 import Logo from '../components/Logo'
 import Container from '../components/Container'
@@ -91,14 +92,24 @@ function Styles() {
           <h3 px={[4,0]}>Colors</h3>
           <table>
             {Object.keys(theme.colors).map((keyName, i) => (
-              <tr>
-                <td maxWidth={64} borderBottom='1px solid' borderColor={theme.colors[keyName]} py={1}>
-                  <div bg={theme.colors[keyName]} px={[3,4,5]} height='100%' pt={3} pb={4}> </div>
-                </td>
-                <td borderBottom='1px solid' borderColor={theme.colors[keyName]} bg='white' color={theme.colors[keyName]} fontWeight={700} px={[2,3,4]} fontSize={[2,5,5]}>Aa</td>
-                <td borderBottom='1px solid' borderColor={theme.colors[keyName]} px={[0,3]} fontWeight={700} fontSize={[1,2,3]}>{keyName}</td>
-                <td borderBottom='1px solid' borderColor={theme.colors[keyName]} px={[0,3]} textAlign='right' bg='white' width='auto' fontSize={[0,1,1]}>{theme.colors[keyName]}</td>
-              </tr>
+                <tr>
+                  <td py={3} width={24} borderBottom='1px solid' bg={theme.colors[keyName]} color='white' borderColor={theme.colors[keyName]} pl={3} fontWeight={700} fontSize={0}>
+                    <span color='black'> 
+                      {chroma.contrast(theme.colors[keyName], 'black').toFixed(2)}
+                    </span>
+                  </td>
+                  <td borderBottom='1px solid' bg={theme.colors[keyName]} color='white' borderColor={theme.colors[keyName]} fontWeight={700} fontSize={0}>
+                      <span px={2} py={1} borderBottom='1px solid' borderColor={theme.colors[keyName]} width={48} bg='black' color={theme.colors[keyName]} fontWeight={700}>Aa</span>
+                  </td>
+                  <td width={24} borderBottom='1px solid' bg={theme.colors[keyName]} color='white' borderColor={theme.colors[keyName]} fontWeight={700} fontSize={0}>
+                    {chroma.contrast(theme.colors[keyName], 'white').toFixed(2)}
+                  </td>
+                  <td borderBottom='1px solid' bg={theme.colors[keyName]} color='white' borderColor={theme.colors[keyName]} fontWeight={700} fontSize={0}>
+                      <span px={2} py={1} borderBottom='1px solid' borderColor={theme.colors[keyName]} width={48} bg='white' color={theme.colors[keyName]} fontWeight={700}>Aa</span>
+                  </td>
+                  <td borderBottom='1px solid' borderColor={theme.colors[keyName]} px={[0,3]} fontWeight={700} fontSize={[1,2,3]}>{keyName}</td>
+                  <td borderBottom='1px solid' borderColor={theme.colors[keyName]} px={[0,3]} textAlign='right' bg='white' width='auto' fontSize={[0,1,1]}>{theme.colors[keyName]}</td>
+                </tr>
             ))}
           </table>
         </section>

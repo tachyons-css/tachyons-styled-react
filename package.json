@@ -6,6 +6,7 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
     "@styled-system/should-forward-prop": "^1.0.0",
+    "chroma-js": "^2.0.3",
     "emotion-theming": "^10.0.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

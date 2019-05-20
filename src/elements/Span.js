@@ -10,6 +10,8 @@ import {
   textAlign,
   textStyle,
   color,
+  borders,
+  borderRadius,
 } from 'styled-system'
 
 const Span = styled('span', { shouldForwardProp })(
@@ -22,6 +24,8 @@ const Span = styled('span', { shouldForwardProp })(
   textAlign,
   textStyle,
   color,
+  borders,
+  borderRadius,
   {},
 )
 
