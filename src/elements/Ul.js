@@ -31,6 +31,8 @@ const Ul = styled('ul', { shouldForwardProp })(
   width,
   maxWidth,
   display,
+  alignItems,
+  justifyContent,
   fontSize,
   color,
   borders,

@@ -3,6 +3,7 @@ import shouldForwardProp from "@styled-system/should-forward-prop"
 import {
   space,
   width,
+  display,
   maxWidth,
   fontSize,
   color,
@@ -25,7 +26,9 @@ import {
 
 const Ol = styled('ol', { shouldForwardProp })(
   space,
+  width,
   maxWidth,
+  display,
   fontSize,
   color,
   borders,
