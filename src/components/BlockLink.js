@@ -39,7 +39,7 @@ const BlockLink = styled('a', { shouldForwardProp })(
     opacity: 1,
     transition: 'opacity .25s ease-in',
     ":hover": {
-      cursor: "pointer"
+      cursor: "pointer",
       opacity: .6,
       transition: 'opacity .25s ease-in'
     }
@@ -49,7 +49,6 @@ const BlockLink = styled('a', { shouldForwardProp })(
 BlockLink.defaultProps = {
   display: "block",
   bg: "transparent",
-  cursor: "pointer"
 }
 
-export default A
+export default BlockLink

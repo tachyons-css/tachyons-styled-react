@@ -84,4 +84,4 @@ Flex.defaultProps = {
 
 }
 
-export default Div
+export default Flex

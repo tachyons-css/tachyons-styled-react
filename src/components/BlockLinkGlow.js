@@ -18,7 +18,7 @@ import {
   textStyle
 } from "styled-system"
 
-const BlockLink = styled('a', { shouldForwardProp })(
+const BlockLinkGlow = styled('a', { shouldForwardProp })(
   space,
   width,
   maxWidth,
@@ -39,17 +39,17 @@ const BlockLink = styled('a', { shouldForwardProp })(
     opacity: .75,
     transition: 'opacity .25s ease-in',
     ":hover": {
-      cursor: "pointer"
+      cursor: "pointer",
       opacity: 1,
       transition: 'opacity .25s ease-in'
     }
   }
 )
 
-BlockLink.defaultProps = {
+BlockLinkGlow.defaultProps = {
   display: "block",
   bg: "transparent",
   cursor: "pointer"
 }
 
-export default A
+export default BlockLinkGlow
