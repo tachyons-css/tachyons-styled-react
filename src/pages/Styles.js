@@ -135,14 +135,17 @@ function Styles() {
             </div>
           </div>
         </section>
-        <section mt={8} py={5} px={4}>
+        <section py={5} px={4}>
           <h3>Border Widths</h3>
           <div position='relative'>
             {theme.borderWidths.map((borderWidth, i) => (
               <>
-              <div mb={3}>
-                <div border={borderWidth + ' solid black'} />
-              </div>
+              {(i > 0) && (
+                <div mb={2}>
+                  <p mt={0} mb={0} fontWeight={800} textAlign='left'>{borderWidth}</p>
+                  <div border={borderWidth + ' solid black'} />
+                </div>
+              )}
               </>
             ))}
           </div>
@@ -154,7 +157,7 @@ function Styles() {
               <>
               <div mb={3} px={3}>
                 <div borderRadius={radius} bg='black' width='auto' height='auto' p={5} />
-                <p mt={0} mb={0} textAlign='center'>{radius}</p>
+                <p mt={0} mb={0} fontWeight={800} textAlign='center'>{radius}</p>
               </div>
               </>
             ))}
