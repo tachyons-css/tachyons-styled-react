@@ -8,7 +8,7 @@ import Logo from '../components/Logo'
 import Container from '../components/Container'
 
 const fontSizes = [ ...theme.fontSizes ]
-const space = [ ...theme.space ]
+const spaces = [ ...theme.space ]
 
 function Styles() {
   return (
@@ -77,8 +77,8 @@ function Styles() {
               <h5 fontWeight={800} mt={0} mb={2}>Line Height: {lineHeight}</h5>
               <p lineHeight={lineHeight} mt={4} mb={0} fontSize={3} fontWeight={600}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-              </p> 
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+              </p>
               <p fontSize={2} mb={5} mt={2} lineHeight={lineHeight}>
                 At
                 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
@@ -94,7 +94,7 @@ function Styles() {
             {Object.keys(theme.colors).map((keyName, i) => (
                 <tr>
                   <td py={3} width={24} borderBottom='1px solid' bg={theme.colors[keyName]} color='white' borderColor={theme.colors[keyName]} pl={3} fontWeight={700} fontSize={0}>
-                    <span color='black'> 
+                    <span color='black'>
                       {chroma.contrast(theme.colors[keyName], 'black').toFixed(2)}
                     </span>
                   </td>
@@ -115,20 +115,30 @@ function Styles() {
         </section>
         <section py={5} px={4}>
           <h3>Spacing Scale</h3>
-          <div  style={{overflowX: 'scroll'}}>
-            <div position='relative' mb={2} height={32}>
-                {space.reverse().map((space, i) => (
-                  <div title={space} position='absolute' top='0' left='0' bottom='0' width={space} height={32} bg='black-10' borderRight='1px solid rgba(0,0,0,.1)'> </div>
-                ))}
-              </div>
-              <div display='flex'>
-            <div mr={2} position='relative' width={theme.space[theme.space.length -1]} height={theme.space[theme.space.length - 1]}>
-                {space.reverse().map((space, i) => (
-                  <div border='1px solid rgba(0,0,0,.1)' title={space} position='absolute' top='50%' right='50%' width={space} height={space} bg='black-10' style={{transform: 'translate(50%,-50%)'}}> </div>
+          <div display="flex"  style={{overflowX: 'scroll', flexDirection: "column"}}>
+            <div position='relative' display="flex" flexDirection="row" mb={4} width={theme.space[theme.space.length -1]}>
+                {spaces.map((space, i) => (
+                  (i > 0) && (
+                    <div  display="flex" alignItems="center" hieght="20px" mr={3} style={{flexDirection: "column"}}>
+                      <p width={50} fontWeight={800}>{`${space} px`}</p>
+                      <div width={30} height={30} mr={3} bg={ `black-${(spaces.length - i)*10}` }></div>
+                    </div>
+                  )
                 ))}
             </div>
-            <div position='relative' mb={2} width={32} height={theme.space[theme.space.length -1]}>
-                {space.reverse().map((space, i) => (
+            <div position='relative' mb={2} height={32}>
+                {spaces.reverse().map((space, i) => (
+                  <div title={space} position='absolute' top='0' left='0' bottom='0' width={space} height={32} bg='black-10' borderRight='1px solid rgba(0,0,0,.1)'> </div>
+                ))}
+            </div>
+            <div display='flex'>
+              <div mr={2} position='relative' width={theme.space[theme.space.length -1]} height={theme.space[theme.space.length - 1]}>
+                {spaces.reverse().map((space, i) => (
+                  <div border='1px solid rgba(0,0,0,.1)' title={space} position='absolute' top='50%' right='50%' width={space} height={space} bg='black-10' style={{transform: 'translate(50%,-50%)'}}> </div>
+                ))}
+              </div>
+              <div position='relative' mb={2} width={32} height={theme.space[theme.space.length -1]}>
+                {spaces.reverse().map((space, i) => (
                   <div title={space} position='absolute' top='0' left='0' bottom='0' width={32} height={space} bg='black-10' borderBottom='1px solid rgba(0,0,0,.1)'> </div>
                 ))}
               </div>
